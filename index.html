@@ -13,9 +13,7 @@
           <span><b> To do</b></span>
           <span>0</span>
 
-          <div class="cards" id="todo">
-            <div class="card" draggable="true"></div>
-          </div>
+          <div class="cards" id="todo"></div>
         </div>
         <button class="addCard">+ Add card</button>
 
@@ -27,10 +25,11 @@
         <div>
           <span><b> In progress</b></span>
           <span>0</span>
+          
         </div>
 
-        <div class="cards" id="todo">
-          <div class="card" draggable="true"></div>
+        <div class="cards" id="">
+          <div class="card"></div>
         </div>
 
         <button class="addCard">+ Add card</button>
@@ -45,7 +44,7 @@
           <span>0</span>
         </div>
 
-        <div class="cards" id="todo">
+        <div class="cards" id="">
           <div class="card" draggable="true"></div>
         </div>
 
@@ -61,9 +60,9 @@
           <span>0</span>
         </div>
 
-        <button class="addCard">+ Add card</button>
+        <button id="done" class="addCard">+ Add card</button>
 
-        <div class="cards" id="todo">
+        <div class="cards" id="">
           <div class="card" draggable="true"></div>
         </div>
 
@@ -72,32 +71,31 @@
         </div>
       </div>
     </div>
-    <div class="backdrop">
-      <div class="addTask">
-        <h1><b>Add Task</b></h1>
-        <p>Title</p>
-        <input type="text" id="titleInput" />
-        <p>Description</p>
-        <input type="text" id="descriptionInput" />
-        <p>Status</p>
-        <select name="" id="status-select">
-          <option value="text">To do</option>
-          <option value="text">In progress</option>
-          <option value="text">Stuck</option>
-          <option value="text">Done</option>
-        </select>
-        <p>Priority</p>
-        <select name="" id="priority-select">
-          <option value="text">Low</option>
-          <option value="text">Medium</option>
-          <option value="text">High</option>
-        </select>
-        <div>
-          <button id="addTaskButton">Add Task</button>
-        </div>
+
+    <div class="addTask">
+      <h1><b>Add Task</b></h1>
+      <p>Title</p>
+      <input type="text" id="titleInput" />
+      <p>Description</p>
+      <input type="text" id="descriptionInput" />
+      <p>Status</p>
+      <select name="" id="status-select">
+        <option value="text">To do</option>
+        <option value="text">In progress</option>
+        <option value="text">Stuck</option>
+        <option value="text">Done</option>
+      </select>
+      <p>Priority</p>
+      <select name="" id="priority-select">
+        <option value="text">Low</option>
+        <option value="text">Medium</option>
+        <option value="text">High</option>
+      </select>
+      <div>
+        <button id="addTaskButton">Add Task</button>
       </div>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./todo.js"></script>
   </body>
 </html>

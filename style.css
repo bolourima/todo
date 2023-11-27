@@ -84,3 +84,13 @@ button {
   height: 25px;
   width: 300px;
 }
+.taskTitleStyle {
+  background-color: azure;
+  height: 30px;
+  width: 100px;
+}
+.taskDescStyle {
+  background-color: azure;
+  height: 100px;
+  width: 99%;
+}

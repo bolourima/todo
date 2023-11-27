@@ -3,9 +3,8 @@ let addCartbtn = document.querySelectorAll(".addCard");
 let addTaskBox = document.querySelector(".addTask");
 
 // Add Task -ийг ил харагдуулах функц
-let currentStatus = "todo"
+let currentStatus = "todo";
 function addCardFunction(event) {
-
   currentStatus = event.target.id;
   // console.log(addTaskBox, "add Task Box");
   addTaskBox.style.display = "block";
@@ -34,8 +33,11 @@ function render() {
     const taskTitle = document.createElement("b");
     const taskDesc = document.createElement("p");
 
-    taskTitle.textContent = task.text;
+    taskTitle.textContent = task.title;
     taskDesc.textContent = task.text;
+
+    taskTitle.className = "taskTitleStyle";
+    taskDesc.className = "taskDescStyle"
 
     cardtodo.appendChild(taskTitle);
     cardtodo.appendChild(taskDesc);
@@ -49,13 +51,23 @@ function addTaskFunc(event) {
   let titleTextInput = document.getElementById("titleInput");
   let destTextInput = document.getElementById("descriptionInput");
 
+  // ene yagaad ajillahgui bn ???
+
   let writenTextTitle = titleTextInput.value.trim();
   let writenDescInput = destTextInput.value.trim();
 
   // console.log(writenTextTitle);
   if ((writenTextTitle !== "") & (destTextInput !== "")) {
-    state.tasks.push({ text: writenTextTitle, text: writenDescInput, status: currentStatus });
+    state.tasks.push({
+      title: writenTextTitle,
+      text: writenDescInput,
+      status: currentStatus,
+    });
     render();
+    
+    destTextInput.innerHTML = "";
+    titleTextInput.innerHTML = "";
+   
     addTaskBox.style.display = "none";
   }
 }

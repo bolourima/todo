@@ -25,7 +25,7 @@ body {
   background-image: url(./todo\ back.jpeg);
   background-size: cover;
 }
-button {
+.addCard {
   width: 245px;
   background-image: url(./buttn\ back.jpeg);
   background-size: cover;
@@ -86,11 +86,30 @@ button {
 }
 .taskTitleStyle {
   background-color: azure;
+  margin-top: 10px;
   height: 30px;
-  width: 100px;
+  width: 99%;
+  margin-top: 10px;
+  border: 1px solid rgb(198, 176, 176);
+  border-radius: 7px;
+  padding: 5px;
 }
 .taskDescStyle {
   background-color: azure;
   height: 100px;
   width: 99%;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  padding: 5px;
+}
+.task {
+  display: flex;
+}
+.checkBtn {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.deletebutton {
+  background-color: aqua;
 }

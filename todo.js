@@ -64,6 +64,8 @@ function render() {
     const deleteBtn = `<button class="deleteBtn">x</button>`;
     const editBtn = `<button class="editBtn">edit</button>`;
 
+    const priorityDad = document.createElement("div");
+    priorityDad.className = "priorityDad"
     const priorityDiv = document.createElement("div");
     priorityDiv.className = "priorityDiv";
     priorityDiv.textContent = task.priority;
@@ -77,14 +79,15 @@ function render() {
     card.appendChild(twoButtDiv);
     twoButtDiv.innerHTML += deleteBtn;
     twoButtDiv.innerHTML += editBtn;
-    cardTodo.appendChild(priorityDiv);
+    cardTodo.appendChild(priorityDad);
+    priorityDad.appendChild(priorityDiv)
 
     const check = document.querySelector(".checkBtn");
     check.addEventListener("click", () => {
       cardDone.appendChild(cardTodo);
     });
 
-    
+
     // const deleteB = document.querySelector(".deleteBtn");
 
     // deleteB.addEventListener("click", () => {
